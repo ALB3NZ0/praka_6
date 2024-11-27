@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название товара"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите название"
+            android:padding="12dp"
+            android:background="@drawable/rounded_background"
+            android:textColor="#000"
+            android:textColorHint="#888"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Description Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Описание товара"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите описание"
+            android:padding="12dp"
+            android:background="@drawable/rounded_background"
+            android:textColor="#000"
+            android:textColorHint="#888"
+            android:layout_marginBottom="16dp"
+            android:minLines="3"
+            android:gravity="start|top" />
+
+        <!-- Choose Image Button -->
+        <Button
+            android:id="@+id/chooseImageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выбрать изображение"
+            android:backgroundTint="#3F51B5"
+            android:textColor="#FFF"
+            android:layout_marginBottom="16dp"
+            android:paddingVertical="12dp" />
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/productImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:background="@drawable/rounded_background" />
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Добавить"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFF"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Обновить"
+                android:backgroundTint="#FFC107"
+                android:textColor="#FFF"
+                android:layout_marginEnd="8dp"
+                android:paddingVertical="12dp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Удалить"
+                android:backgroundTint="#F44336"
+                android:textColor="#FFF"
+                android:paddingVertical="12dp" />
+        </LinearLayout>
+
+        <!-- ListView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Список товаров"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:layout_marginBottom="4dp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#DDD"
+            android:dividerHeight="1dp"
+            android:background="@drawable/rounded_background" />
+
+    </LinearLayout>
+</ScrollView>
